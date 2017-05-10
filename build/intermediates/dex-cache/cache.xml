@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
+        jar="G:\Android_File\Calculator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f0cf1a69ed5506ba849231953336324ddb6d54dc">
+        <dex dex="G:\Android_File\Calculator\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5e935d100558aeecae0028459c8e70981d53b49b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="G:\Android_File\Calculator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="G:\Android_File\Calculator\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_5cf39d437d997bdc929665aa719734ef0144c4e8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="G:\Android_File\Calculator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e96ec97fc07eb91e10cbacb554a229c4b5eb29d3">
-        <dex dex="G:\Android_File\Calculator\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5e935d100558aeecae0028459c8e70981d53b49b\classes.dex" />
     </item>
 
 </items>

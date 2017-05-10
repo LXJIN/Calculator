@@ -1,0 +1,4 @@
+#Tue May 09 01:25:26 CST 2017
+base.0=G\:\\Android_File\\Calculator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_5
+renamed.0=classes.dex
+file.0=G\:\\Android_File\\Calculator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_5\\classes.dex
