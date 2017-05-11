@@ -15,7 +15,7 @@ public class Calculator extends AppCompatActivity {
     private  double secondNumber = 0;// 第二次输入的值
     private String NumS = null;//数字字符
     private static String result = null;// 显示的结果
-    private static String Old_result = null;// 中间的结果，形式：1+
+    private static String Old_result = null;// 中间的结果，形式：操作数+运算符，例如：1+
     private  int op=0;//判断操作符
     private static int Num_OP = 0;//操作符的个数
     private double num = 0;//计算结果数值
@@ -28,7 +28,7 @@ public class Calculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
+        //从布局文件中获取控件
         //功能按钮
         tvResult = (TextView) findViewById(R.id.tvResult);
         Button btnBackspace = (Button) findViewById(R.id.btnBackspace);
@@ -60,12 +60,12 @@ public class Calculator extends AppCompatActivity {
                 result = tvResult.getText().toString();
                 if(isEmpty(result)) return;
                 else {
-                    /*NumS = result.substring(result.length() - 1, result.length());//截取最后一个字符
-                    while (NumS.equals("+") || NumS.equals("-") || NumS.equals("X")
+                    NumS = result.substring(result.length() - 1, result.length());//截取最后一个字符
+                    if(NumS.equals("+") || NumS.equals("-") || NumS.equals("X")
                             || NumS.equals("÷")){
                         op=0;
                         Num_OP--;
-                    }*/
+                    }
                     result = result.substring(0, result.length() - 1);//截取字符串
                     tvResult.setText(result);
 
@@ -238,7 +238,7 @@ public class Calculator extends AppCompatActivity {
                 if(secondNumber != 0){
                     num = firstNumber / secondNumber;
                 }else{
-                    Toast.makeText(getApplicationContext(), "0不能为除数",
+                    Toast.makeText(getApplicationContext(), "0不能为被除数",
                             Toast.LENGTH_SHORT).show();
                     num = firstNumber;
                 }
