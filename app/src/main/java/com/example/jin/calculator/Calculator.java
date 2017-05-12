@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class Calculator extends AppCompatActivity {
     TextView tvResult = null;  //显示器
@@ -238,8 +241,10 @@ public class Calculator extends AppCompatActivity {
                 if(secondNumber != 0){
                     num = firstNumber / secondNumber;
                 }else{
-                    Toast.makeText(getApplicationContext(), "0不能为被除数",
-                            Toast.LENGTH_SHORT).show();
+                    Toast t = Toast.makeText(getApplicationContext(), "0不能为除数",
+                            Toast.LENGTH_LONG);
+                    t.show();
+                    execToast(t);
                     num = firstNumber;
                 }
                 break;
@@ -258,6 +263,23 @@ public class Calculator extends AppCompatActivity {
         return (str==null || str.trim().length()==0);
     }
 
+    private void execToast(final Toast toast) {
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                toast.show();
+            }
+        }, 3000);//3000表示点击按钮之后，Toast延迟3000ms后显示
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                toast.cancel();
+                timer.cancel();
+            }
+        }, 10000);// 10000表示Toast显示时间为10秒
+    }
 }
+
 
 
